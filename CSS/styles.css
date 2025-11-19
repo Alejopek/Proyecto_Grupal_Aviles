@@ -1,0 +1,57 @@
+:root {
+  --brand: #c82333;
+  --accent: #f8f9fa;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+  color: #222;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25)),
+    url("../Pizza.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+#logo {
+  background: linear-gradient(135deg, #fff, #eee);
+  display: inline-block;
+}
+
+#formAlert {
+  min-height: 2rem;
+}
+
+@media (max-width: 576px) {
+  header .container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hero {
+    padding: 3rem 0;
+  }
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(200, 40, 50, 0.18);
+  outline-offset: 2px;
+}
+
+.text-truncate {
+  min-height: 2.2rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
