@@ -10,11 +10,28 @@ body {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25)),
-    url("../Pizza.jpg");
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
+  /* keep gradient fallback in case video is not available */
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
   min-height: 320px;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+  filter: brightness(0.55);
+}
+
+.hero > .container {
+  position: relative;
+  z-index: 1; /* put content above video */
 }
 
 .card-img-top {
